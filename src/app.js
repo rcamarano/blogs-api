@@ -1,5 +1,6 @@
 const express = require('express');
 const loginRouter = require('./routes/LoginRoute');
+const userRoute = require('./routes/UserRoute');
 // const bodyParser = require('body-parser');
 // const apiRoutes = require('./routes');
 
@@ -18,6 +19,7 @@ app.get('/', (_request, response) => {
 
 app.use(express.json());
 app.use('/login', loginRouter);
+app.use('/user', userRoute);
 
 // ...
 
