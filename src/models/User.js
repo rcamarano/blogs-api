@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
         displayName: {
           type: DataTypes.STRING,
-          field: 'diplay_name',
+          field: 'display_name',
         },
         email: DataTypes.STRING,
         password: DataTypes.STRING,
