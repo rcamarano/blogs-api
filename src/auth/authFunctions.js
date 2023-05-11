@@ -4,7 +4,7 @@ const secret = process.env.JWT_SECRET || 'batatinhaPraHomenagearOZambs';
 
 const JWT_CONFIG = {
   algorithm: 'HS256',
-  expiresIn: '10m',
+  // expiresIn: '10m',
 };
 
 const verifyToken = (token) => jwt.verify(token, secret);
