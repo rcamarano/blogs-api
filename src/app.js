@@ -1,6 +1,6 @@
 const express = require('express');
-const loginRouter = require('./routes/LoginRoute');
-const userRouter = require('./routes/UserRoute');
+const { loginRouter, userRouter, categoryRouter } = require('./routes');
+// const userRouter = require('./routes/UserRoute');
 // const bodyParser = require('body-parser');
 // const apiRoutes = require('./routes');
 
@@ -20,6 +20,7 @@ app.get('/', (_request, response) => {
 app.use(express.json());
 app.use('/login', loginRouter);
 app.use('/user', userRouter);
+app.use('/categories', categoryRouter);
 
 // ...
 
