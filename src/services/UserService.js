@@ -14,9 +14,14 @@ const getByEmail = (email) => User.findOne({ where: { email } });
 const getUserById = (id) => User.findOne({ where: { id }, attributes: { exclude: ['password'] } });
 const getAllUsers = () => User.findAll({ attributes: { exclude: ['password'] } });
 
+const deleteUser = async (userId) => {
+  await User.destroy({ where: { id: userId } });
+};
+
 module.exports = {
   create,
   getByEmail,
   getUserById,
   getAllUsers,
+  deleteUser,
 };
